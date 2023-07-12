@@ -25,7 +25,7 @@
             android:id="@+id/banner_iv"
             android:layout_width="match_parent"
             android:layout_height="440dp"
-            android:background="@drawable/ic_banner"
+            android:background="@drawable/il_banner_manas"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

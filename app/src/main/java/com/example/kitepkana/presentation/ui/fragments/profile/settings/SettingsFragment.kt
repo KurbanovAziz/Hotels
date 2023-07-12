@@ -1,5 +1,7 @@
 package com.example.kitepkana.presentation.ui.fragments.profile.settings
 
+import android.content.Intent
+import android.net.Uri
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
@@ -59,7 +61,11 @@ class SettingsFragment : BaseFragment(R.layout.fragment_settings) {
             findNavController().navigate(R.id.supportFragment)
         }
         binding.btnGoToWebsite.setOnClickListener {
-
+            val browserIntent = Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse("https://64a6a662b9883f1bec3a7a60--gilded-arithmetic-73b507.netlify.app/setting_users")
+            )
+            startActivity(browserIntent)
         }
         binding.ivBack.setOnClickListener {
             findNavController().navigateUp()
