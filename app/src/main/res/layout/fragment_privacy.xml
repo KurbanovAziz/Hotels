@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.ui.fragments.profile.settings.privacy.PrivacyFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:id="@+id/customToolbar"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:src="@drawable/ic_arrow_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:fontFamily="@font/ff_roboto_regular"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:paddingHorizontal="8dp"
+            android:text="@string/privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        app:layout_constraintTop_toBottomOf="@id/customToolbar"
+        android:layout_width="match_parent"
+        android:paddingBottom="22dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/tv_privacy"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

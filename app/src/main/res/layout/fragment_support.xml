@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.ui.fragments.profile.settings.support.SupportFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:id="@+id/customToolbar"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:src="@drawable/ic_arrow_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:fontFamily="@font/ff_roboto_regular"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:paddingHorizontal="8dp"
+            android:text="@string/send_support"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/tv_layout"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customToolbar"
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/black"
+            android:fontFamily="@font/ff_roboto_regular"
+            android:textSize="16sp"
+            android:text="@string/your_request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:fontFamily="@font/ff_roboto_regular"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:text="@string/we_well_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    
+    <EditText
+        android:layout_margin="16dp"
+        android:gravity="top"
+        android:padding="8dp"
+        android:textColor="@color/gray"
+        android:textSize="14sp"
+        android:hint="@string/tell_me_in_detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_layout"
+        android:background="@drawable/style_gray_radius"
+        android:fontFamily="@font/ff_roboto_regular"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"/>
+
+    <Button
+        android:layout_marginVertical="36dp"
+        android:layout_marginHorizontal="60dp"
+        android:text="@string/send"
+        android:textSize="16sp"
+        android:id="@+id/btn_send"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/orange"
+        android:background="@drawable/button_style_settings_profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/ff_roboto_regular"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

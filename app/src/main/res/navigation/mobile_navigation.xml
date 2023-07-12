@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/library">
+
+    <fragment
+        android:id="@+id/library"
+        android:name="com.example.kitepkana.presentation.ui.fragments.library.LibraryFragment"
+        android:label="@string/library"
+        tools:layout="@layout/fragment_library" />
+
+    <fragment
+        android:id="@+id/search"
+        android:name="com.example.kitepkana.presentation.ui.fragments.search.SearchFragment"
+        android:label="@string/search"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/read"
+        android:name="com.example.kitepkana.presentation.ui.fragments.read.ReadFragment"
+        android:label="@string/read"
+        tools:layout="@layout/fragment_read" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.kitepkana.presentation.ui.fragments.profile.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.kitepkana.presentation.ui.fragments.profile.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.kitepkana.presentation.ui.fragments.profile.settings.editprofile.EditProfileFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" />
+    <fragment
+        android:id="@+id/reviewsFragment"
+        android:name="com.example.kitepkana.presentation.ui.fragments.reviews.ReviewsFragment"
+        android:label="fragment_reviews"
+        tools:layout="@layout/fragment_reviews" />
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.example.kitepkana.presentation.ui.fragments.authorization.auth.AuthFragment"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_auth" />
+    <fragment
+        android:id="@+id/supportFragment"
+        android:name="com.example.kitepkana.presentation.ui.fragments.profile.settings.support.SupportFragment"
+        android:label="fragment_support"
+        tools:layout="@layout/fragment_support" />
+    <fragment
+        android:id="@+id/bookFragment"
+        android:name="com.example.kitepkana.presentation.ui.fragments.book.BookFragment"
+        android:label="fragment_book"
+        tools:layout="@layout/fragment_book" />
+    <fragment
+        android:id="@+id/languagesFragment"
+        android:name="com.example.kitepkana.presentation.ui.fragments.profile.settings.languages.LanguagesFragment"
+        android:label="fragment_languages"
+        tools:layout="@layout/fragment_languages" />
+    <fragment
+        android:id="@+id/privacyFragment"
+        android:name="com.example.kitepkana.presentation.ui.fragments.profile.settings.privacy.PrivacyFragment"
+        android:label="fragment_privacy"
+        tools:layout="@layout/fragment_privacy" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.kitepkana.presentation.ui.fragments.authorization.register.RegisterFragment"
+        android:label="RegisterFragment" />
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.example.kitepkana.presentation.ui.fragments.onboarding.OnBoardingFragment"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding" />
+    <fragment
+        android:id="@+id/openBookFragment"
+        android:name="com.example.kitepkana.presentation.ui.fragments.book.open.ReadBookFragment"
+        android:label="fragment_open_book"
+        tools:layout="@layout/fragment_read_book" />
+    <fragment
+        android:id="@+id/restoreFragment"
+        android:name="com.example.kitepkana.presentation.ui.fragments.authorization.restore.RestoreFragment"
+        android:label="fragment_restore"
+        tools:layout="@layout/fragment_restore" />
+    <activity
+        android:id="@+id/splashActivity"
+        android:name="com.example.kitepkana.presentation.ui.activity.splash.SplashActivity"
+        android:label="activity_splash"
+        tools:layout="@layout/activity_splash" />
+    <fragment
+        android:id="@+id/activationFragment"
+        android:name="com.example.kitepkana.presentation.ui.fragments.authorization.register.activation.ActivationFragment"
+        android:label="ActivationFragment" />
+</navigation>
