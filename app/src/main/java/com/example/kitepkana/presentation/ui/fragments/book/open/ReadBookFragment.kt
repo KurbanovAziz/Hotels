@@ -1,6 +1,8 @@
 package com.example.kitepkana.presentation.ui.fragments.book.open
 
+import android.view.View
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.kitepkana.R
@@ -60,5 +62,15 @@ class ReadBookFragment : BaseFragment(R.layout.fragment_read_book) {
     }
 
     override fun setupListeners() {
+        binding.root.setOnClickListener {
+            if (binding.customToolbar.visibility == View.GONE) {
+                binding.customToolbar.visibility = View.VISIBLE
+            } else {
+                binding.customToolbar.visibility = View.GONE
+            }
+        }
+        binding.ivBack.setOnClickListener {
+            findNavController().navigateUp()
+        }
     }
 }

@@ -48,7 +48,7 @@ class AuthFragment : BaseFragment(R.layout.fragment_auth) {
             findNavController().navigate(R.id.registerFragment)
         }
         binding.tvRestore.setOnClickListener {
-            findNavController().navigate(R.id.activationFragment)
+            findNavController().navigate(R.id.restoreFragment)
         }
 
         binding.passwordVisibility.setOnClickListener {
