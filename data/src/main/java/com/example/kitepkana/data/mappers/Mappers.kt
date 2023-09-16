@@ -1,47 +1,14 @@
 package com.example.kitepkana.data.mappers
 
-import com.example.kitepkana.data.model.*
-import com.example.kitepkana.domain.model.*
+import com.example.kitepkana.data.models.HotelsModel
+import com.example.kitepkana.domain.entities.Hotels
 
 
-fun BooksModel.toBooks() = Books(
-    id, title, cover, author_name, summary, middle_star
+fun Hotels.fromHotels() = HotelsModel(
+    about_the_hotel, adress, id, image_urls, minimal_price, name, price_for_it, rating, rating_name
 )
 
-fun DetailBookModel.toDetailBook() = DetailBook(
-    author_name,
-    cover,
-    genre,
-    id,
-    middle_star,
-    publication_year,
-    reviews,
-    summary,
-    title,
-    similar_books
+fun HotelsModel.toHotels() = Hotels(
+    about_the_hotel, adress, id, image_urls, minimal_price, name, price_for_it, rating, rating_name
 )
 
-fun ResultModel.toReadBook() = ResultD(
-    count,results
-)
-
-fun AddFavorite.fromFavorite() = AddFavoriteModel(
-    book
-)
-
-fun AddFavoriteModel.toFavorite() = AddFavorite(
-    book
-)
-
-fun CreateReviews.fromReviews() = CreateReviewsModel(
-    book, star, text
-)
-
-fun CreateReviewsModel.toReviews() = CreateReviews(
-    book, star, text
-)
-
-
-fun ProfileModel.toProfile() = Profile(
-    email, password, user_photo, username,reading, finish, favorite
-)

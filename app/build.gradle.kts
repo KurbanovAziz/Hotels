@@ -85,6 +85,8 @@ android {
 
         //Interceptor
         implementation(Libraries.OkHttp.loggingInterceptor)
+
+        implementation("com.hannesdorfmann:adapterdelegates4:4.3.0")
     }
 }
 dependencies {

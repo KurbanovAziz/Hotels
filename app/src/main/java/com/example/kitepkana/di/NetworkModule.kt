@@ -1,11 +1,8 @@
 package com.example.kitepkana.di
 
 import android.content.Context
-import com.example.kitepkana.data.BuildConfig.BASE_URL
 import com.example.kitepkana.data.local.AppPrefs
 import com.example.kitepkana.data.remote.service.ApiService
-import com.example.kitepkana.data.remote.service.AuthorizationService
-import com.example.kitepkana.data.remote.utils.AuthInterceptor
 import com.example.kitepkana.data.repostory.*
 import com.example.kitepkana.domain.repository.*
 import dagger.Module
@@ -32,12 +29,6 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun provideIntercept(appPrefs: AppPrefs): AuthInterceptor {
-        return AuthInterceptor(appPrefs)
-    }
-
-    @Singleton
-    @Provides
     fun provideInterceptor(): HttpLoggingInterceptor {
         return HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
     }
@@ -45,7 +36,6 @@ object NetworkModule {
     @Singleton
     @Provides
     fun provideHttpClient(
-        interceptor: AuthInterceptor,
         loggingInterceptor: HttpLoggingInterceptor
     ): OkHttpClient {
 
@@ -53,7 +43,6 @@ object NetworkModule {
             .writeTimeout(15, TimeUnit.SECONDS)
             .readTimeout(15, TimeUnit.SECONDS)
             .connectTimeout(15, TimeUnit.SECONDS)
-            .addInterceptor(interceptor)
             .addInterceptor(loggingInterceptor)
             .build()
     }
@@ -64,7 +53,7 @@ object NetworkModule {
         okHttpClient: OkHttpClient,
     ): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl("https://run.mocky.io/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttpClient)
             .build()
@@ -75,44 +64,9 @@ object NetworkModule {
         retrofit.create(ApiService::class.java)
 
     @Provides
-    fun provideAuthorizationService(retrofit: Retrofit): AuthorizationService =
-        retrofit.create(AuthorizationService::class.java)
-
-    @Provides
-    fun provideRegisterRepository(
-        authorizationService: AuthorizationService,
-        appPrefs: AppPrefs
-    ): AuthorizationRepository {
-        return AuthorizationRepositoryImpl(authorizationService, appPrefs)
+    fun provideFavoritesRepository(apiService: ApiService): HotelsRepository {
+        return HotelsRepositoryImpl(apiService)
     }
 
-    @Provides
-    fun provideLibraryRepository(apiService: ApiService): LibraryRepository {
-        return LibraryRepositoryImpl(apiService)
-    }
 
-    @Provides
-    fun provideBookRepository(apiService: ApiService): BookRepository {
-        return BookRepositoryImpl(apiService)
-    }
-
-    @Provides
-    fun provideFavoritesRepository(apiService: ApiService): FavoritesRepository {
-        return FavoritesRepositoryImpl(apiService)
-    }
-
-    @Provides
-    fun provideReviewsRepository(apiService: ApiService): ReviewsRepository {
-        return ReviewsRepositoryImpl(apiService)
-    }
-
-    @Provides
-    fun provideProfileRepository(apiService: ApiService): ProfileRepository {
-        return ProfileRepositoryImpl(apiService)
-    }
-
-    @Provides
-    fun provideSearchRepository(apiService: ApiService): SearchRepository {
-        return SearchRepositoryImpl(apiService)
-    }
 }

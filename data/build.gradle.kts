@@ -18,11 +18,6 @@ android {
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             )
-            buildConfigField("String", "BASE_URL", "\"http://kitepkana1.pythonanywhere.com/\"")
-        }
-
-        getByName(AndroidConfig.debug) {
-            buildConfigField("String", "BASE_URL", "\"http://kitepkana1.pythonanywhere.com/\"")
         }
     }
     compileOptions {
