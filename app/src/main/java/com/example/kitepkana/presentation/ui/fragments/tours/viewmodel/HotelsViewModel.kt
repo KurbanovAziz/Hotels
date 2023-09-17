@@ -1,4 +1,4 @@
-package com.example.kitepkana.presentation.ui.fragments.hotels.viewmodel
+package com.example.kitepkana.presentation.ui.fragments.tours.viewmodel
 
 import com.example.kitepkana.domain.entities.Hotels
 import com.example.kitepkana.domain.usecases.GetHotelsUseCase

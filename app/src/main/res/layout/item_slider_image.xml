@@ -1,27 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="220dp">
 
     <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_width="match_parent"
-        app:cardCornerRadius="15dp"
-        android:layout_margin="16dp"
-        android:layout_height="match_parent">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/iv_hotel"
-            android:src="@color/black"
-            android:scaleType="centerCrop"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="258dp"/>
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/my_image"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/green_"
+                android:elevation="20dp"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.55"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/white"
+                android:elevation="@dimen/box_corners_10"
+                android:id="@+id/img_favorite"
+                android:src="@drawable/ic_heart"
+                app:layout_constraintEnd_toEndOf="@id/my_image"
+                app:layout_constraintTop_toTopOf="@id/my_image" />
+
+            <ImageView
+                android:id="@+id/img_star"
+                android:src="@drawable/img"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintEnd_toStartOf="@id/tv_rating"
+                app:layout_constraintTop_toBottomOf="@id/my_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="@color/green_"
+                android:text="Жети Огуз"
+                android:layout_margin="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/my_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/green_"
+                android:text="4.6"
+                android:textSize="12sp"
+                android:id="@+id/tv_rating"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintTop_toBottomOf="@id/my_image"
+                app:layout_constraintEnd_toStartOf="@id/tv_number_people"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="(25)"
+                android:id="@+id/tv_number_people"
+                android:layout_margin="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/my_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:textSize="10sp"
+                android:textColor="@color/green_"
+                android:text="@string/tv_date"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_date_number"
+                android:textColor="@color/green_"
+                android:textSize="10sp"
+                android:text="3 снетября"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toEndOf="@id/tv_date"
+                app:layout_constraintTop_toBottomOf="@id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textColor="@color/green_"
+                android:id="@+id/tv_hard"
+                android:text="@string/tv_hard"
+                android:layout_marginStart="8dp"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:textSize="10sp"
+                android:text="3/5"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/green_"
+                app:layout_constraintStart_toEndOf="@id/tv_hard"
+                app:layout_constraintTop_toBottomOf="@id/tv_date_number"
+                android:layout_width="wrap_content"
+                android:id="@+id/tv_hard_number"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/green_"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="2500 сом"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_hard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

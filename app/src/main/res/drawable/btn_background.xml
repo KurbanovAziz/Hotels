@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#817777" /> <!-- Белый цвет -->
+    <stroke
+        android:color="@color/green_"
+        android:width="1dp"/> <!-- Толщина границы -->
+     <!-- Красный цвет границы -->
+    <corners android:radius="8dp" /> <!-- Закругленные углы -->
+</shape>

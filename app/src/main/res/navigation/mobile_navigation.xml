@@ -3,22 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/hotelsFragment">
+    app:startDestination="@id/aboutUsFragment">
 
     <fragment
-        android:id="@+id/onBoardingFragment"
-        android:name="com.example.kitepkana.presentation.ui.fragments.onboarding.OnBoardingFragment"
-        android:label="fragment_on_boarding"
-        tools:layout="@layout/fragment_on_boarding" />
-    <activity
-        android:id="@+id/splashActivity"
-        android:name="com.example.kitepkana.presentation.ui.activity.splash.SplashActivity"
-        android:label="activity_splash"
-        tools:layout="@layout/activity_splash" />
-    <fragment
         android:id="@+id/hotelsFragment"
-        android:name="com.example.kitepkana.presentation.ui.fragments.hotels.HotelsFragment"
+        android:name="com.example.kitepkana.presentation.ui.fragments.tours.HotelsFragment"
         android:label="fragment_hotels"
         tools:layout="@layout/fragment_hotels" />
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.example.kitepkana.presentation.ui.fragments.about_us.AboutUsFragment"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/eventsFragment"
+        android:name="com.example.kitepkana.presentation.ui.events.EventsFragment"
+        android:label="fragment_events"
+        tools:layout="@layout/fragment_events" />
+    <fragment
+        android:id="@+id/toursDetailFragment"
+        android:name="com.example.kitepkana.presentation.ui.fragments.toursDetail.ToursDetailFragment"
+        android:label="fragment_tours_detail"
+        tools:layout="@layout/fragment_tours_detail" />
 
 </navigation>

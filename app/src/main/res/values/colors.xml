@@ -7,6 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="white_">#7C7474</color>
     <color name="orange">#E6FF3D00</color>
     <color name="gray">#7C7C7C</color>
     <color name="gray_20p">#337C7C7C</color>
@@ -15,4 +16,5 @@
     <color name="new_black23">#232323</color>
     <color name="green">#06A503</color>
     <color name="orange_text">#E5FF3D00</color>
+    <color name="green_">#042918</color>
 </resources>

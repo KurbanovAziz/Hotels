@@ -1,4 +1,4 @@
-package com.example.kitepkana.presentation.ui.fragments.hotels.adapter
+package com.example.kitepkana.presentation.ui.fragments.tours.adapter
 
 import android.util.Log
 import android.view.LayoutInflater
@@ -40,7 +40,7 @@ class HotelSliderAdapter() : RecyclerView.Adapter<HotelSliderAdapter.OnBoardingV
     inner class OnBoardingViewHolder(private val binding: ItemSliderImageBinding) :
         ViewHolder(binding.root) {
         fun bind(hotels: String) {
-            binding.ivHotel.loadImage(hotels)
+            binding.myImage.loadImage(hotels)
             Log.e("ololo", "bind: ${hotels}", )
         }
     }

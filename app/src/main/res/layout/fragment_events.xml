@@ -4,45 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.ui.fragments.tours.HotelsFragment">
+    tools:context=".presentation.ui.events.EventsFragment">
 
     <TextView
-        android:id="@+id/tv_popular"
+        android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="40dp"
-        android:text="Самые популярные туры"
+        android:layout_margin="30dp"
+        android:text="Ближайшие мероприятия"
         android:textColor="@color/green_"
-        android:textSize="12sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="40dp"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:layout_margin="30dp"
         app:layout_constraintBottom_toTopOf="@id/btn_order"
-        app:layout_constraintTop_toBottomOf="@id/tv_popular"
-        app:spanCount="2"
-        tools:listitem="@layout/item_slider_image" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        tools:listitem="@layout/item_events" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_order"
-        android:text="Заказать тур"
-        android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/white"
+        android:text="Заказать тур"
+        android:textAllCaps="false"
+        android:textColor="@color/green_"
         android:textSize="16sp"
-        android:backgroundTint="@color/green_"
-        app:cornerRadius="16sp"
+        app:cornerRadius="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
