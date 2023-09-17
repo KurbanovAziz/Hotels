@@ -41,6 +41,7 @@ class AuthorizationTwoFragment : BaseFragment(R.layout.fragment_authorization_tw
         }
     }
 
+
     companion object {
         const val ARGS_AUTH = "auth"
     }
