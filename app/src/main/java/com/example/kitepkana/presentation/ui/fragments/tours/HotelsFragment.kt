@@ -24,23 +24,9 @@ class HotelsFragment : BaseFragment(R.layout.fragment_hotels) {
     }
 
     override fun setupRequests() {
-        hotelsViewModel.getHotels()
     }
 
     override fun setupSubscribers() {
-        hotelsViewModel.getHotelsState.collectUIState(
-            state = {},
-            onSuccess = {
-                adapter.addData(it)
-//                binding.tvTitle.text = it.name
-//                binding.tvLocation.text = it.adress
-//                binding.tvPrice.text = "от ${it.minimal_price} ₽"
-//                binding.tvPriceForIt.text = it.price_for_it
-//                binding.tvRating.text = it.rating.toString()
-//                binding.tvRatingName.text = it.rating_name
-//                binding.tvDesc.text = it.about_the_hotel.description
-            }
-        )
     }
 
     override fun setupListeners() {

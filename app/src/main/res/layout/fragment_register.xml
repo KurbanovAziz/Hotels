@@ -47,6 +47,7 @@
                 android:layout_height="wrap_content"/>
 
             <EditText
+                android:id="@+id/ed_phone_and_email"
                 android:background="@drawable/style_ed"
                 android:layout_width="match_parent"
                 android:paddingHorizontal="14dp"
@@ -62,6 +63,7 @@
                 android:layout_height="wrap_content"/>
 
             <EditText
+                android:id="@+id/ed_last"
                 android:background="@drawable/style_ed"
                 android:layout_width="match_parent"
                 android:paddingHorizontal="14dp"
@@ -77,6 +79,7 @@
                 android:layout_height="wrap_content"/>
 
             <EditText
+                android:id="@+id/ed_name"
                 android:background="@drawable/style_ed"
                 android:layout_width="match_parent"
                 android:paddingHorizontal="14dp"
@@ -89,6 +92,7 @@
                 app:cornerRadius="64dp"
                 android:textAllCaps="false"
                 android:padding="16dp"
+                android:id="@+id/btn_register"
                 android:textSize="16sp"
                 android:fontFamily="@font/ff_montserrat_bold"
                 android:text="Зарегестрироваться"

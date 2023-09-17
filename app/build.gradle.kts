@@ -5,6 +5,7 @@ plugins {
 
     // Hilt
     id(Plugins.Hilt.android)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -87,6 +88,8 @@ android {
         implementation(Libraries.OkHttp.loggingInterceptor)
 
         implementation("com.hannesdorfmann:adapterdelegates4:4.3.0")
+        implementation("com.google.firebase:firebase-auth-ktx:22.1.2")
+        implementation("com.google.android.gms:play-services-auth:20.7.0")
     }
 }
 dependencies {

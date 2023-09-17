@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.kitepkana.databinding.ItemSliderImageBinding
-import com.example.kitepkana.domain.entities.Hotels
 import com.example.kitepkana.presentation.utils.loadImage
 
 class HotelSliderAdapter() : RecyclerView.Adapter<HotelSliderAdapter.OnBoardingViewHolder>() {
@@ -21,12 +20,6 @@ class HotelSliderAdapter() : RecyclerView.Adapter<HotelSliderAdapter.OnBoardingV
                 false
             )
         )
-    }
-
-    fun addData(dat: Hotels) {
-        this.data.clear()
-        this.data.addAll(dat.image_urls)
-        notifyDataSetChanged()
     }
 
     override fun onBindViewHolder(holder: OnBoardingViewHolder, position: Int) {

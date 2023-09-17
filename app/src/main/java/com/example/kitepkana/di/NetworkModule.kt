@@ -1,6 +1,7 @@
 package com.example.kitepkana.di
 
 import android.content.Context
+import com.example.kitepkana.R
 import com.example.kitepkana.data.local.AppPrefs
 import com.example.kitepkana.data.remote.service.ApiService
 import com.example.kitepkana.data.repostory.*
@@ -53,7 +54,7 @@ object NetworkModule {
         okHttpClient: OkHttpClient,
     ): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://run.mocky.io/")
+            .baseUrl("http://10.10.2.21:8000/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttpClient)
             .build()
@@ -64,8 +65,8 @@ object NetworkModule {
         retrofit.create(ApiService::class.java)
 
     @Provides
-    fun provideFavoritesRepository(apiService: ApiService): HotelsRepository {
-        return HotelsRepositoryImpl(apiService)
+    fun provideFavoritesRepository(apiService: ApiService): RegistrationRepository {
+        return RegistrationRepositoryImpl(apiService)
     }
 
 

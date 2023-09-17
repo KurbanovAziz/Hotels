@@ -3,19 +3,17 @@ package com.example.kitepkana.presentation.ui.activity.main
 
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
 import android.widget.PopupMenu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.core.view.isVisible
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.AppBarConfiguration
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.kitepkana.R
 import com.example.kitepkana.data.local.AppPrefs
 import com.example.kitepkana.databinding.NavDrawerBinding
+import com.google.android.gms.auth.api.identity.BeginSignInRequest
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -38,10 +36,11 @@ class MainActivity : AppCompatActivity() {
         initListeners()
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            binding.activityMain.layoutInclude.isVisible = !(destination.id == R.id.registerFragment ||
-                    destination.id == R.id.authorizationTwoFragment2 ||
-                    destination.id == R.id.mainAuthorizationFragment ||
-                    destination.id == R.id.authFragment)
+            binding.activityMain.layoutInclude.isVisible =
+                !(destination.id == R.id.registerFragment ||
+                        destination.id == R.id.authorizationTwoFragment2 ||
+                        destination.id == R.id.mainAuthorizationFragment ||
+                        destination.id == R.id.authFragment)
         }
     }
 

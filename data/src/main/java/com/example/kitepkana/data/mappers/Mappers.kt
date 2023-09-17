@@ -1,14 +1,14 @@
 package com.example.kitepkana.data.mappers
 
-import com.example.kitepkana.data.models.HotelsModel
-import com.example.kitepkana.domain.entities.Hotels
+import com.example.kitepkana.data.models.RegistrationModel
+import com.example.kitepkana.domain.entities.Registration
 
 
-fun Hotels.fromHotels() = HotelsModel(
-    about_the_hotel, adress, id, image_urls, minimal_price, name, price_for_it, rating, rating_name
+fun Registration.fromRegistration() = RegistrationModel(
+    first_name, last_name, email
 )
 
-fun HotelsModel.toHotels() = Hotels(
-    about_the_hotel, adress, id, image_urls, minimal_price, name, price_for_it, rating, rating_name
+fun RegistrationModel.toRegistration() = Registration(
+   first_name, last_name, email
 )
 
