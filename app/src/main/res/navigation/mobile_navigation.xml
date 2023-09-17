@@ -3,22 +3,46 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/hotelsFragment">
+    app:startDestination="@id/mainAuthorizationFragment">
 
-    <fragment
-        android:id="@+id/onBoardingFragment"
-        android:name="com.example.kitepkana.presentation.ui.fragments.onboarding.OnBoardingFragment"
-        android:label="fragment_on_boarding"
-        tools:layout="@layout/fragment_on_boarding" />
     <activity
         android:id="@+id/splashActivity"
         android:name="com.example.kitepkana.presentation.ui.activity.splash.SplashActivity"
         android:label="activity_splash"
         tools:layout="@layout/activity_splash" />
+
     <fragment
         android:id="@+id/hotelsFragment"
         android:name="com.example.kitepkana.presentation.ui.fragments.hotels.HotelsFragment"
         android:label="fragment_hotels"
         tools:layout="@layout/fragment_hotels" />
+
+    <fragment
+        android:id="@+id/mainAuthorizationFragment"
+        android:name="com.example.kitepkana.presentation.ui.fragments.authorization.MainAuthorizationFragment"
+        android:label="fragment_main_authorization"
+        tools:layout="@layout/fragment_main_authorization" />
+
+    <fragment
+        android:id="@+id/authorizationTwoFragment2"
+        android:name="com.example.kitepkana.presentation.ui.fragments.authorization.AuthorizationTwoFragment"
+        android:label="AuthorizationTwoFragment"
+        tools:layout="@layout/fragment_authorization_two"/>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.kitepkana.presentation.ui.fragments.authorization.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.kitepkana.presentation.ui.fragments.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.example.kitepkana.presentation.ui.fragments.authorization.auth.AuthFragment"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_auth" />
+
 
 </navigation>

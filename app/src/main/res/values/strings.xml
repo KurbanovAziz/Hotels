@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Muras</string>
+    <string name="app_name">Бирдик</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
@@ -104,4 +104,13 @@
     <string name="code_not_received">Не пришел код?</string>
     <string name="to_retry">Повторить попытку</string>
     <string name="please_accept_the_terms_and_privacy_policy">Пожалуйста, примите условия и политику конфиденциальности</string>
+    <string name="russian">Русский</string>
+    <string name="kyrgyz_tili">Кыргыз тили</string>
+    <string name="english">English</string>
+    <string name="som">Сом</string>
+    <string name="dollar">Доллар($)</string>
+    <string name="asia_travel">Asia Travel</string>
+    <string name="my_profile">Мой профиль</string>
+    <string name="number_phone">Номер телефона</string>
+    <string name="email">E-mail</string>
 </resources>
