@@ -3,61 +3,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/mainAuthorizationFragment">
-
-    <activity
-        android:id="@+id/splashActivity"
-        android:name="com.example.kitepkana.presentation.ui.activity.splash.SplashActivity"
-        android:label="activity_splash"
-        tools:layout="@layout/activity_splash" />
+    app:startDestination="@id/hotelsFragment">
 
     <fragment
         android:id="@+id/hotelsFragment"
-        android:name="com.example.kitepkana.presentation.ui.fragments.tours.HotelsFragment"
+        android:name="com.example.hotel.presentation.ui.fragments.hotels.HotelsFragment"
         android:label="fragment_hotels"
-        tools:layout="@layout/fragment_hotels" />
+        tools:layout="@layout/fragment_hotels" >
+        <action
+            android:id="@+id/action_hotelsFragment_to_roomsFragment"
+            app:destination="@id/roomsFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/aboutUsFragment"
-        android:name="com.example.kitepkana.presentation.ui.fragments.about_us.AboutUsFragment"
-        android:label="fragment_about_us"
-        tools:layout="@layout/fragment_about_us" />
+        android:id="@+id/paidFragment"
+        android:name="com.example.hotel.presentation.ui.fragments.paid.PaidFragment"
+        android:label="fragment_paid"
+        tools:layout="@layout/fragment_paid" />
     <fragment
-        android:id="@+id/eventsFragment"
-        android:name="com.example.kitepkana.presentation.ui.events.EventsFragment"
-        android:label="fragment_events"
-        tools:layout="@layout/fragment_events" />
+        android:id="@+id/roomsFragment"
+        android:name="com.example.hotel.presentation.ui.fragments.rooms.RoomsFragment"
+        android:label="fragment_rooms"
+        tools:layout="@layout/fragment_rooms" >
+        <action
+            android:id="@+id/action_roomsFragment_to_reservationFragment"
+            app:destination="@id/reservationFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/toursDetailFragment"
-        android:name="com.example.kitepkana.presentation.ui.fragments.toursDetail.ToursDetailFragment"
-        android:label="fragment_tours_detail"
-        tools:layout="@layout/fragment_tours_detail" />
-
-    <fragment
-        android:id="@+id/mainAuthorizationFragment"
-        android:name="com.example.kitepkana.presentation.ui.fragments.authorization.MainAuthorizationFragment"
-        android:label="fragment_main_authorization"
-        tools:layout="@layout/fragment_main_authorization" />
-
-    <fragment
-        android:id="@+id/authorizationTwoFragment2"
-        android:name="com.example.kitepkana.presentation.ui.fragments.authorization.AuthorizationTwoFragment"
-        android:label="AuthorizationTwoFragment"
-        tools:layout="@layout/fragment_authorization_two"/>
-    <fragment
-        android:id="@+id/registerFragment"
-        android:name="com.example.kitepkana.presentation.ui.fragments.authorization.register.RegisterFragment"
-        android:label="fragment_register"
-        tools:layout="@layout/fragment_register" />
-    <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.example.kitepkana.presentation.ui.fragments.profile.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
-    <fragment
-        android:id="@+id/authFragment"
-        android:name="com.example.kitepkana.presentation.ui.fragments.authorization.auth.AuthFragment"
-        android:label="fragment_auth"
-        tools:layout="@layout/fragment_auth" />
+        android:id="@+id/reservationFragment"
+        android:name="com.example.hotel.presentation.ui.fragments.reservations.ReservationsFragment"
+        android:label="fragment_reservation"
+        tools:layout="@layout/fragment_reservation" >
+        <action
+            android:id="@+id/action_reservationFragment_to_paidFragment"
+            app:destination="@id/paidFragment" />
+    </fragment>
 
 
 </navigation>

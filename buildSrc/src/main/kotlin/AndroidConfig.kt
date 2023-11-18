@@ -10,6 +10,6 @@ object AndroidConfig {
 
 object Namespaces {
 
-    const val app = "com.example.kitepkana"
-    const val data = "com.example.kitepkana.data"
+    const val app = "com.example.hotel"
+    const val data = "com.example.hotel.data"
 }

@@ -2,65 +2,35 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:paddingHorizontal="16dp"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:id="@+id/iv_burger_menu"
-        android:src="@drawable/ic_menu"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginHorizontal="50dp"
+        android:textSize="18sp"
+        android:id="@+id/tv_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ff_sf_pro_display_medium"
+        />
+
+    <ImageButton
+        android:paddingVertical="32dp"
+        android:paddingHorizontal="28dp"
+        android:id="@+id/ib_back"
+        android:background="@null"
+        android:src="@drawable/ic_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <ImageView
-        android:src="@drawable/ic_logo_small"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_width="26dp"
-        android:layout_height="26dp"/>
-
-    <LinearLayout
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/iv_profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/tv_languages"
-            android:text="Русский"
-            android:textSize="9sp"
-            android:fontFamily="@font/ff_montserrat_bold"
-            android:textColor="@color/dark_green"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:drawableEndCompat="@drawable/ic_arrow_down" />
-
-        <TextView
-            android:id="@+id/tv_currency"
-            android:text="Сом"
-            android:textSize="9sp"
-            android:layout_marginStart="14dp"
-            android:fontFamily="@font/ff_montserrat_bold"
-            android:textColor="@color/dark_green"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:drawableEndCompat="@drawable/ic_arrow_down" />
-
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/iv_profile"
-        android:src="@drawable/ic_profile"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="26dp"
-        android:layout_height="26dp"/>
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

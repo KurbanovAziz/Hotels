@@ -4,47 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.ui.fragments.tours.HotelsFragment">
+    tools:context=".presentation.ui.fragments.hotels.HotelsFragment">
 
-    <TextView
-        android:id="@+id/tv_popular"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="40dp"
-        android:text="Самые популярные туры"
-        android:textColor="@color/dark_green"
-        android:textSize="12sp"
-        android:textStyle="bold"
+    <FrameLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/fl_custom_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/include_custom_app_bar"
+            layout="@layout/custom_app_bar" />
+
+    </FrameLayout>
+
+    <ProgressBar
+        android:elevation="10dp"
+        android:visibility="gone"
+        android:id="@+id/progress_bar"
+        android:indeterminateTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_hotels"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="40dp"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:layout_constraintBottom_toTopOf="@id/btn_order"
-        app:layout_constraintTop_toBottomOf="@id/tv_popular"
-        app:spanCount="2"
-        tools:listitem="@layout/item_slider_image" />
+        app:layout_constraintTop_toBottomOf="@id/fl_custom_app_bar"
+        app:layout_constraintBottom_toTopOf="@id/fl_btn"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_hotels" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_order"
-        android:text="Заказать тур"
-        android:textAllCaps="false"
+    <FrameLayout
+        android:background="@drawable/radius_bg_bottom"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:textSize="16sp"
-        android:backgroundTint="@color/dark_green"
-        app:cornerRadius="16sp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        android:id="@+id/fl_btn"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:id="@+id/btn_to_choose_number"
+            android:fontFamily="@font/ff_sf_pro_display_medium"
+            android:textColor="@color/white"
+            android:text="@string/to_choose_number"
+            android:background="@drawable/main_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
